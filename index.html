@@ -1,13 +1,276 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="da">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#efe7dc" />
-    <title>Sigma Prototype</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sigma prototype</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div class="prototype-shell">
+      <aside class="intro-panel">
+        <p class="product-name">sigma</p>
+        <h1>Aurora Hudklinik</h1>
+        <p>
+          En rolig split-screen prototype med kundeapp til venstre og klinikkens
+          admin-preview til højre.
+        </p>
+      </aside>
+
+      <main class="split-stage" aria-label="Kundeapp og admin-preview">
+        <section class="phone-column">
+          <div class="phone-label">
+            <div>
+              <p class="eyebrow">Bruger</p>
+              <h2>Kundeapp</h2>
+            </div>
+            <span>Live</span>
+          </div>
+
+          <div class="phone-frame">
+            <div class="phone-shell user-phone">
+              <header class="status-bar">
+                <span>09:41</span>
+                <div class="status-icons" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+              </header>
+
+              <div class="app-bar">
+                <button class="clinic-lockup" data-go="home" aria-label="Gå til hjem">
+                  <span class="clinic-mark">AU</span>
+                  <span>
+                    <strong>Aurora</strong>
+                    <small>Hudklinik</small>
+                  </span>
+                </button>
+                <button class="icon-button" data-go="profile" aria-label="Åbn profil">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20 21a8 8 0 0 0-16 0" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="screen-stack">
+                <section class="screen is-active" data-screen="home" role="tabpanel">
+                  <div class="page-title">
+                    <p class="eyebrow">Hej Maja</p>
+                    <h2>Din næste tid</h2>
+                  </div>
+
+                  <article class="next-card">
+                    <span class="mini-label">Torsdag 21. maj, 14.30</span>
+                    <h3 data-next-service>Glow Facial Signature</h3>
+                    <p>Hos Lea Mikkelsen</p>
+                    <button class="text-button" data-go="booking">Flyt tid</button>
+                  </article>
+
+                  <button class="primary-button" data-go="booking">Book ny tid</button>
+
+                  <article class="quiet-card">
+                    <div>
+                      <span class="mini-label">Aktuelt tilbud</span>
+                      <strong data-user-campaign>20% på Glow Facial</strong>
+                    </div>
+                    <span class="small-badge">Til fredag</span>
+                  </article>
+
+                  <section class="simple-list" aria-label="Fremhævet behandling">
+                    <div class="list-heading">
+                      <h3>Fremhævet</h3>
+                      <span data-selected-service-price>895 kr.</span>
+                    </div>
+                    <article>
+                      <div>
+                        <strong data-selected-service>Glow Facial Signature</strong>
+                        <small data-selected-service-meta>60 min, fugt og massage</small>
+                      </div>
+                      <button class="text-button" data-go="booking">Book</button>
+                    </article>
+                  </section>
+                </section>
+
+                <section class="screen" data-screen="booking" role="tabpanel">
+                  <div class="page-title">
+                    <p class="eyebrow">Booking</p>
+                    <h2>Vælg tid</h2>
+                  </div>
+
+                  <article class="booking-summary">
+                    <span class="mini-label">Behandling</span>
+                    <h3 data-booking-service>Glow Facial Signature</h3>
+                    <p><span data-booking-meta>60 min</span>, <span data-booking-price>895 kr.</span></p>
+                  </article>
+
+                  <div class="choice-group" aria-label="Dato">
+                    <button>Ons 20</button>
+                    <button class="is-selected">Tor 21</button>
+                    <button>Fre 22</button>
+                  </div>
+
+                  <div class="choice-group time-group" aria-label="Tid">
+                    <button>11.00</button>
+                    <button class="is-selected">14.30</button>
+                    <button>16.15</button>
+                  </div>
+
+                  <article class="quiet-card">
+                    <div>
+                      <span class="mini-label">Behandler</span>
+                      <strong>Lea Mikkelsen</strong>
+                    </div>
+                    <span class="small-badge">Ledig</span>
+                  </article>
+
+                  <button class="primary-button" data-go="home">Bekræft booking</button>
+                </section>
+
+                <section class="screen" data-screen="profile" role="tabpanel">
+                  <div class="profile-head">
+                    <span class="profile-avatar">MH</span>
+                    <div>
+                      <p class="eyebrow">Profil</p>
+                      <h2>Maja Holm</h2>
+                      <p>Plus-medlem</p>
+                    </div>
+                  </div>
+
+                  <article class="quiet-card">
+                    <div>
+                      <span class="mini-label">Medlemskab</span>
+                      <strong>10% rabat på behandlinger</strong>
+                    </div>
+                    <span class="small-badge">Aktiv</span>
+                  </article>
+
+                  <div class="settings-list">
+                    <label class="setting-row">
+                      <span>
+                        <strong>Push-tilbud</strong>
+                        <small>Kun relevante kampagner</small>
+                      </span>
+                      <input type="checkbox" checked />
+                      <i></i>
+                    </label>
+                    <label class="setting-row">
+                      <span>
+                        <strong>Påmindelser</strong>
+                        <small>24 timer før aftale</small>
+                      </span>
+                      <input type="checkbox" checked />
+                      <i></i>
+                    </label>
+                  </div>
+                </section>
+              </div>
+
+              <nav class="bottom-nav" aria-label="Primær navigation">
+                <button class="nav-button is-active" data-screen-trigger="home" aria-label="Hjem">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 11.5 12 5l8 6.5V20a1 1 0 0 1-1 1h-5v-6h-4v6H5a1 1 0 0 1-1-1Z" />
+                  </svg>
+                  <span>Hjem</span>
+                </button>
+                <button class="nav-button" data-screen-trigger="booking" aria-label="Booking">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="4" y="5" width="16" height="15" rx="2" />
+                    <path d="M8 3v4M16 3v4M8 11h8M8 15h5" />
+                  </svg>
+                  <span>Book</span>
+                </button>
+                <button class="nav-button" data-screen-trigger="profile" aria-label="Profil">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20 21a8 8 0 0 0-16 0" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                  <span>Profil</span>
+                </button>
+              </nav>
+            </div>
+          </div>
+        </section>
+
+        <section class="phone-column">
+          <div class="phone-label">
+            <div>
+              <p class="eyebrow">Admin</p>
+              <h2>Klinikejer</h2>
+            </div>
+            <span>Preview</span>
+          </div>
+
+          <div class="phone-frame">
+            <div class="phone-shell admin-phone">
+              <header class="status-bar">
+                <span>09:41</span>
+                <div class="status-icons" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+              </header>
+
+              <div class="app-bar">
+                <div class="clinic-lockup static">
+                  <span class="clinic-mark">AU</span>
+                  <span>
+                    <strong>Aurora Admin</strong>
+                    <small>Klinikejer</small>
+                  </span>
+                </div>
+              </div>
+
+              <div class="admin-content">
+                <div class="page-title">
+                  <p class="eyebrow">Admin-preview</p>
+                  <h2>Styr kundeappen</h2>
+                </div>
+
+                <article class="quiet-card brand-card">
+                  <div>
+                    <span class="mini-label">Klinik</span>
+                    <strong>Aurora Hudklinik</strong>
+                    <small>København</small>
+                  </div>
+                  <span class="clinic-mark large">AU</span>
+                </article>
+
+                <section class="admin-panel">
+                  <div class="panel-title">
+                    <h3>Fremhævet behandling</h3>
+                    <span>Vises på hjem</span>
+                  </div>
+                  <div class="option-list">
+                    <button class="option-button is-selected" data-service-title="Glow Facial Signature" data-service-meta="60 min, fugt og massage" data-service-price="895 kr.">Glow Facial</button>
+                    <button class="option-button" data-service-title="HydraGlow Deluxe" data-service-meta="75 min, peel og fugtboost" data-service-price="1.095 kr.">HydraGlow</button>
+                    <button class="option-button" data-service-title="Brow Lift & Tint" data-service-meta="45 min, form og farve" data-service-price="425 kr.">Bryn</button>
+                  </div>
+                </section>
+
+                <section class="admin-panel">
+                  <div class="panel-title">
+                    <h3>Tilbud</h3>
+                    <span>Push og forside</span>
+                  </div>
+                  <div class="option-list">
+                    <button class="campaign-button is-selected" data-campaign-offer="20% på Glow Facial">20% Glow</button>
+                    <button class="campaign-button" data-campaign-offer="Gratis LED add-on">Gratis LED</button>
+                  </div>
+                </section>
+
+                <article class="push-preview">
+                  <span class="mini-label">Push-preview</span>
+                  <h3>Aurora: <span data-campaign-offer-label>20% på Glow Facial</span></h3>
+                  <p>Sendes til kunder med aktive push-tilbud.</p>
+                </article>
+
+                <button class="primary-button admin-save">Gem ændringer</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
   </body>
 </html>
