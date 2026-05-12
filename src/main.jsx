@@ -3,10 +3,10 @@ import { createRoot } from "react-dom/client";
 import "./styles.css";
 
 const clinic = {
-  name: "Glow Copenhagen",
-  subtitle: "Hudpleje, bryn og laser",
+  name: "Glow Studio",
+  subtitle: "Hudpleje · Bryn · Vipper · Laser",
   description:
-    "En moderne skønhedsklinik med nem booking, tydelige behandlinger og en app-lignende kundeoplevelse.",
+    "Book behandlinger i et roligt og professionelt klinik-univers. En enkel mobiloplevelse til kunder, der vil have overblik uden bøvl.",
   address: "Gammel Kongevej 82, Frederiksberg",
   phone: "+45 31 42 88 90"
 };
@@ -87,7 +87,7 @@ function App() {
             <div className="logo">S</div>
             <div>
               <strong>Sigma</strong>
-              <span>Beauty platform</span>
+              <span>For beauty clinics</span>
             </div>
           </div>
 
@@ -156,7 +156,7 @@ function ClientApp({ tab, setTab, clinic, treatments, bookings, onBook }) {
         {tab === "home" && (
           <section className="stack">
             <div className="hero">
-              <p className="eyebrow">Skønhedsklinik</p>
+              <p className="eyebrow">Mobil booking</p>
               <h1>{clinic.name}</h1>
               <p>{clinic.description}</p>
 
