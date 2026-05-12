@@ -84,10 +84,10 @@ function App() {
       <div className="phone">
         <header className="topbar">
           <div className="brand">
-            <div className="logo">Σ</div>
+            <div className="logo">S</div>
             <div>
               <strong>Sigma</strong>
-              <span>Clinic app</span>
+              <span>Beauty platform</span>
             </div>
           </div>
 
