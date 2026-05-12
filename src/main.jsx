@@ -156,7 +156,7 @@ function ClientApp({ tab, setTab, clinic, treatments, bookings, onBook }) {
         {tab === "home" && (
           <section className="stack">
             <div className="hero">
-              <p className="eyebrow">Powered by Sigma</p>
+              <p className="eyebrow">Skønhedsklinik</p>
               <h1>{clinic.name}</h1>
               <p>{clinic.description}</p>
 
