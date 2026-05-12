@@ -1,0 +1,13 @@
+/* Sigma Prototype – global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  background: #efe7dc;
+  color: #2f2926;
+  min-height: 100vh;
+}
